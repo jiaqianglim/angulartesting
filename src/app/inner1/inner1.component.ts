@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { outputAst } from '@angular/compiler';
+import { Component, Input } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-inner1',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./inner1.component.css']
 })
 export class Inner1Component {
+
+  @Input()
+  inputString!: string;
+
 
 }
